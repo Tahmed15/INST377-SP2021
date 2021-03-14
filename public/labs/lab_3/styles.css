@@ -1,6 +1,10 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
 
+body{
+    padding: 10px;
+}
+
 .container{
     position: relative;
     width: 400px;
@@ -31,7 +35,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 0;   
+    font-size: 0;
+    transform: margin-left 250ms;  
 }
 
 .prev {
@@ -50,7 +55,7 @@
     border: 1px gray;
     font-size: 24px;
     line-height: 24px;
-    color: #444;
+    color: rgb(0, 0, 0);
     display: block;
 }
 

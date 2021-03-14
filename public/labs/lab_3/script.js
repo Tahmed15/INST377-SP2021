@@ -1,7 +1,7 @@
 const { event } = require("cypress/types/jquery");
 
 /* Put your javascript in here */
-let width = 150;
+let width = 140;
 let count = 3;
 
 let list = container.querySelector('ul');
