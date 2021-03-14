@@ -7,7 +7,7 @@ body{
 
 .container{
     position: relative;
-    width: 400px;
+    width: 398px;
     padding: 10px 40px;
     border: 1px solid #ccc;
     border-radius: 15px;
@@ -15,13 +15,13 @@ body{
 }
 
 .container img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     display: block;
 }
 
 .list_pic{
-    width: 400px;
+    width: 390px;
     overflow: hidden;
 }
 
@@ -30,7 +30,7 @@ body{
 }
 
 .list_pic ul{
-    height: 140px;
+    height: 130px;
     width: 9999px;
     margin: 0;
     padding: 0;
@@ -40,17 +40,18 @@ body{
 }
 
 .prev {
-    left: 6px;
+    left: 7px;
 }
 
 .next {
-    right: 6px;
+    right: 7px;
 }
 
 .arrow{
     position: absolute;
     top: 60px;
-    background: rgb(204, 204, 204);
+    padding: 0;
+    background: rgb(204, 5, 5);
     border-radius: 15px;
     border: 1px gray;
     font-size: 24px;
