@@ -14,6 +14,7 @@
 
 .list{
     width: 400px;
+    overflow: hidden;
 }
 
 .list li{
@@ -35,3 +36,25 @@
 .next {
     right: 6px;
 }
+
+.arrow{
+    position: absolute;
+    top: 60px;
+    background: rgb(204, 204, 204);
+    border-radius: 15px;
+    border: 1px gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.arrow:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
