@@ -4,8 +4,13 @@ const { event } = require("cypress/types/jquery");
 let width = 150;
 let count = 3;
 
-function clickToChange() {
-    const prev =document.querySelector('.prev');
-    const next =document.querySelector('.next');
+let list = container.querySelector('ul');
+let listElems = container.querySelectorAll('li');
+let position = 0;
+
+container.querySelector('.prev').onclick = function() {
+    position += width*count;
 }
-window.onload = clickToChange;
+container.querySelector('.next').onclick = function() {
+    position -= width * count;
+};
