@@ -12,16 +12,16 @@
     display: block;
 }
 
-.list{
+.list_pic{
     width: 400px;
     overflow: hidden;
 }
 
-.list li{
+.list_pic li{
     display: inline-block;
 }
 
-.list ul{
+.list_pic ul{
     height: 140px;
     width: auto;
     margin: 0;
