@@ -3,12 +3,16 @@
 
 .container{
     position: relative;
-    
+    width: 400px;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: #eee;
 }
 
 .container img{
-    width: 150;
-    height: 150;
+    width: 150px;
+    height: 150px;
     display: block;
 }
 
@@ -23,10 +27,11 @@
 
 .list_pic ul{
     height: 140px;
-    width: auto;
+    width: 9999px;
     margin: 0;
     padding: 0;
-    transition: margin-left 250ms;
+    list-style: none;
+    font-size: 0;   
 }
 
 .prev {
