@@ -36,7 +36,7 @@ body{
     padding: 0;
     list-style: none;
     font-size: 0;
-    transform: margin-left 250ms;  
+    margin-left: 250ms;  
 }
 
 .prev {
