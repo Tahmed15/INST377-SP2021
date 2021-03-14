@@ -1,3 +1,37 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
- 
+
+.container{
+    position: relative;
+    
+}
+
+.container img{
+    width: 150;
+    height: 150;
+    display: block;
+}
+
+.list{
+    width: 400px;
+}
+
+.list li{
+    display: inline-block;
+}
+
+.list ul{
+    height: 140px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 250ms;
+}
+
+.prev {
+    left: 6px;
+}
+
+.next {
+    right: 6px;
+}
