@@ -15,23 +15,27 @@ function mapInit() {
   return mymap;
 }
 
-async function dataHandler(mapObjectFromFunction) {
+async function dataHandler(mapFromLeafLet) {
   // use your assignment 1 data handling code here
   // and target mapObjectFromFunction to attach markers
       const form = document.querySelector('#search-form');
       const search = document.querySelector('#search');
       const targetList = document.querySelector('.target-list');
-
-      const request = await fetch('/api');
+      
+      endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'
+      const request = await fetch(endpoint);
       const data = await request.json();
       
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        const filtered = data.filter((record) => record.zip.includes(search.value));
+        console.log('form sub');
+        const filtered = data.filter((record) => record.zip.includes(search.value)&& record.geocoded_column_1);
+        console.table(filtered);
+
         filtered.forEach((item) => {
           const longLat = item.geocoded_column_1.coordinates;
           console.log('markerLongLat', longLat[0], longLat[1]);
-          const marker = L.marker([longLat[1], longLat[0]]).addTo(mapFromMapFunction);
+          const marker = L.marker([longLat[1], longLat[0]]).addTo(mapFromLeafLet);
 
           const appendItem = document.createElement('li');
           appendItem.classList.add('block');
