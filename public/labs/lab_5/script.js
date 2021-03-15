@@ -12,7 +12,7 @@ function mapInit() {
 }).addTo(mymap);
   console.log('mymap',mymap)
 
-  return map;
+  return mymap;
 }
 
 async function dataHandler(mapObjectFromFunction) {
