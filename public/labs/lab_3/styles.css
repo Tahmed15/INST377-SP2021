@@ -12,8 +12,9 @@ body {
   border: 1px solid #CCC;
   border-radius: 15px;
   background: #eee;
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .carousel img {
