@@ -17,7 +17,7 @@ function mapInit() {
 
 async function dataHandler(mapObjectFromFunction) {
   // use your assignment 1 data handling code here
-  // and target mapObjectFromFunction to attach markers      
+  // and target mapObjectFromFunction to attach markers     
       const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
       const request = await fetch(endpoint);
       const zips = await request.json();
