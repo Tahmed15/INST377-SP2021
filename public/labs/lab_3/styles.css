@@ -4,12 +4,16 @@
   width: 150px;
 }
 
+
 .second {
   background: lightseagreen;
   height: 50px;
   width: 50px;
 }
 
+.container {
+  display: flex;
+}
 .prev {
   display: block;
   height: 20px;
