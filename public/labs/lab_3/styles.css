@@ -61,7 +61,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  transition: margin-left 250ms;
+  margin-left: 250ms;
   /* remove white-space between inline-block'ed li */
   /* http://davidwalsh.name/remove-whitespace-inline-block */
   font-size: 0;
