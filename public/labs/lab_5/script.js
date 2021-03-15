@@ -1,6 +1,6 @@
 function mapInit() {
   // follow the Leaflet Getting Started tutorial here
-  const mymap = L.map('mapid').setView([51.505, -0.09], 13);
+  const mymap = L.map('mapid').setView([38.9897, -76.9378], 13);
 
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -64,7 +64,7 @@ window.onload = windowActions;
 
 async function windowActions() {
   const map = mapInit();
-  await dataHandler(map);
+  //await dataHandler(map);
 }
 
 window.onload = windowActions;
