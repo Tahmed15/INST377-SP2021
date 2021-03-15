@@ -11,16 +11,13 @@ function mapInit() {
     accessToken: 'pk.eyJ1IjoidGFobWVkMTUiLCJhIjoiY2ttYXpuMDkxMTduNTJ1cWZqaHk1Mjk3MyJ9.dXYHLLCI3OBzhRRQrXH-_g'
 }).addTo(mymap);
   console.log('mymap',mymap)
+
   return map;
 }
 
 async function dataHandler(mapObjectFromFunction) {
   // use your assignment 1 data handling code here
-  // and target mapObjectFromFunction to attach markers
-
-    async function windowActions() {
-      console.log('window loaded');
-      
+  // and target mapObjectFromFunction to attach markers      
       const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
       const request = await fetch(endpoint);
       const zips = await request.json();
