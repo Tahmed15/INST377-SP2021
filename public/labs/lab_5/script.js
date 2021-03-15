@@ -21,8 +21,8 @@ async function dataHandler(mapFromLeafLet) {
       const form = document.querySelector('#search-form');
       const search = document.querySelector('#search');
       const targetList = document.querySelector('.target-list');
-      
-      endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'
+
+      endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
       const request = await fetch(endpoint);
       const data = await request.json();
       
