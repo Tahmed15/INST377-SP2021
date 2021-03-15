@@ -17,17 +17,29 @@
 
 </head>
 <body>
-    <div class="columns">
+    <section class="section">
+        <div class="container columns is-max-widescreen">
+            <div class="column info">
+                <h1 class="title">Tabraiz Ahmed lab 5</h1>
+                <div class="subtitle">Zip Code Food Search</div>
+                <div class="block">
+                    <form id="search-form" action="" class="block form">
+                        <label for="search"></label>
+                        <input type="text" id="search" name="search">
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div class="reply-box block">
+                        <div class="reply-message"></div>
+                        <ul class="target-list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
         <div class="column">
-            <form action="" id="search-form">
-                <label for="search"></label>
-                <input type="text" id="search" name="search">
-            </form>
-            <ul class="target-list">
-            </ul>
+            <div id="mapid"></div>
         </div>
-        <div class="column"><div id="mapid"></div></div>
     </div>
+    </section>
     <script src="script.js"></script>
 
     <!-- <div class="container.is-max-desktop">
