@@ -37,10 +37,15 @@
   background: lightblue;
 }
 
-.slider {
+.left {
+  position: fixed;
+  left: 45px;
+}
+.list {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   background: red;
   border-radius: 4px;
+  overflow-x: hidden;
 }
