@@ -17,50 +17,31 @@ function mapInit() {
 
 async function dataHandler(mapObjectFromFunction) {
   // use your assignment 1 data handling code here
-  // and target mapObjectFromFunction to attach markers     
-      const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
-      const request = await fetch(endpoint);
-      const zips = await request.json();
+  // and target mapObjectFromFunction to attach markers
+      const form = document.querySelector('#search-form');
+      const search = document.querySelector('#search');
+      const targetList = document.querySelector('.target-list');
+
+      const request = await fetch('/api');
+      const data = await request.json();
       
-      function findMatches(wordToMatch, zips) {
-          return zips.filter(restaurant => {
-              const regex = new RegExp(wordToMatch, 'gi');
-              return restaurant.zip.match(regex)
-      })
-      }
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const filtered = data.filter((record) => record.zip.includes(search.value));
+        filtered.forEach((item) => {
+          const longLat = item.geocoded_column_1.coordinates;
+          console.log('markerLongLat', longLat[0], longLat[1]);
+          const marker = L.marker([longLat[1], longLat[0]]).addTo(mapFromMapFunction);
 
-      function displayMatches(event) {
-          const matchArray = findMatches(event.target.value, zips);
-          const html = matchArray.map(restaurant => {
-              const regex = new RegExp(event.target.value, 'gi');
-              const zipCode = restaurant.zip.replace(regex, `<span class="h1">${event.target.value}</span>`);
-              return `
-              <li>
-              <span class="name">${restaurant.name}</span></br>
-              <span class="category">${restaurant.category}</span></br>
-              <span class="address">${restaurant.address_line_1}</span></br>
-              <span class="city state">${restaurant.city}, ${restaurant.state}</span></br>
-              <span class="zipcode>${zipCode}</span></br>
-              </li>
-              `;
-          }).join('');
-          suggestions.innerHTML = html;
-  }
-
-  const searchInput = document.querySelector('.search');
-  const suggestions = document.querySelector('.suggestions');
-
-  searchInput.addEventListener('change', displayMatches);
-  searchInput.addEventListener('keyup', (evt) => {
-      displayMatches(evt)
-  });
-
-}
-window.onload = windowActions;
-
+          const appendItem = document.createElement('li');
+          appendItem.classList.add('block');
+          appendItem.classList.add('list-item');
+          appendItem.innerHTML = '<div class="list-header is-size-5">${item.name}</div><address class="is-size-6">${item.address_line_1}</address>';
+          targetList.append(appendItem);
+        });
+      });
 }
 
-//end
 
 async function windowActions() {
   const map = mapInit();
