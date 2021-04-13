@@ -14,6 +14,7 @@ const __dirname = path.resolve();
 const app = express();
 const port = process.env.PORT || 3000;
 const staticFolder = 'public';
+const staticFolder = 'public';
 
 // Add some auto-reloading to our server
 const liveReloadServer = reload.createServer();
@@ -23,6 +24,7 @@ liveReloadServer.watch(path.join(__dirname, staticFolder));
 app.use(connectReload());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(staticFolder));
 app.use(express.static(staticFolder));
 
 app.use((req, res, next) => {
